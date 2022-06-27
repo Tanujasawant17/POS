@@ -1,0 +1,12 @@
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Book Title</label>
+    <input class="form-control" id="exampleFormControlInput1" [(ngModel)]="bookdetails.title">
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Book Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+        [(ngModel)]="bookdetails.description"></textarea>
+</div>
+<div class="mb-3">
+    <button class="btn btn-primary" (click)="Save()" type="submit">Save</button>
+</div>

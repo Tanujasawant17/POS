@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row ">
+    <div class="col-12 " *ngIf="isList">
+      <button class="btn btn-primary  m-2 float-right " (click)="AddOrEdit(undefined)" type="submit">Add</button>
+    </div>
+  </div>
+  <div class="row">
+    <app-list *ngIf="isList" (afterEdit)="AddOrEdit($event)"></app-list>
+    <app-details *ngIf="!isList" [bookdetails]="bookdetailsobj" (afterSave)="OnSaveClick($event)"></app-details>
+  </div>
+</div>
